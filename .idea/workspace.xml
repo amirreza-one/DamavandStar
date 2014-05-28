@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f77cd3b-e2b2-4895-8ec2-364a476dddb1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="DamavandStar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="779" selection-end="779" vertical-scroll-proportion="0.63873625" vertical-offset="0" max-vertical-offset="870">
+            <state line="30" column="0" selection-start="761" selection-end="761" vertical-scroll-proportion="0.6181319" vertical-offset="0" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -347,7 +347,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="779" selection-end="779" vertical-scroll-proportion="0.63873625" vertical-offset="0" max-vertical-offset="870">
+        <state line="30" column="0" selection-start="761" selection-end="761" vertical-scroll-proportion="0.6181319" vertical-offset="0" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
