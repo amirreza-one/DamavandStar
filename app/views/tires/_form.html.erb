@@ -1,0 +1,49 @@
+<%= form_for(@tire) do |f| %>
+  <% if @tire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tire.errors.count, "error") %> prohibited this tire from being saved:</h2>
+
+      <ul>
+      <% @tire.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :tire_type %><br>
+    <%= f.text_field :tire_type %>
+  </div>
+  <div class="field">
+    <%= f.label :pattern %><br>
+    <%= f.text_field :pattern %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :week %><br>
+    <%= f.number_field :week %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

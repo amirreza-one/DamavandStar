@@ -5,7 +5,6 @@
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:DamavandStar_production</jdbc-url>
-      <user-name>root</user-name>
       <libraries />
     </data-source>
   </component>

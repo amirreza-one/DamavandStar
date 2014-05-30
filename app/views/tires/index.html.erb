@@ -1,0 +1,41 @@
+<h1>Listing tires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Size</th>
+      <th>Tire type</th>
+      <th>Pattern</th>
+      <th>Year</th>
+      <th>Week</th>
+      <th>Summary</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tires.each do |tire| %>
+      <tr>
+        <td><%= tire.brand %></td>
+        <td><%= tire.size %></td>
+        <td><%= tire.tire_type %></td>
+        <td><%= tire.pattern %></td>
+        <td><%= tire.year %></td>
+        <td><%= tire.week %></td>
+        <td><%= tire.summary %></td>
+        <td><%= tire.price %></td>
+        <td><%= link_to 'Show', tire %></td>
+        <td><%= link_to 'Edit', edit_tire_path(tire) %></td>
+        <td><%= link_to 'Destroy', tire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tire', new_tire_path %>

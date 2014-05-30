@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @tire.brand %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @tire.size %>
+</p>
+
+<p>
+  <strong>Tire type:</strong>
+  <%= @tire.tire_type %>
+</p>
+
+<p>
+  <strong>Pattern:</strong>
+  <%= @tire.pattern %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @tire.year %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @tire.week %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @tire.summary %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tire.price %>
+</p>
+
+<%= link_to 'Edit', edit_tire_path(@tire) %> |
+<%= link_to 'Back', tires_path %>

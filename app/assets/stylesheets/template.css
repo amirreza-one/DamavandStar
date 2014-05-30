@@ -1,0 +1,70 @@
+@charset "UTF-8";
+body {
+	background-image: url(southwest-desert-road.jpg);
+
+	min-height: 1024px;
+	background-repeat: no-repeat;
+    background-size: 100% auto;
+	background-color: #FAFAFA;
+}
+.col-sm-offset-1.col-sm-10 .row .navbar.navbar-inverse .container-fluid .navbar-header .navbar-brand {
+	color: #990000;
+}
+#mainDiv {
+	background-color: #FFFFFF;
+	border-radius: 2px;
+	min-height: 500px;
+	border-color: #777777;
+	margin-top: -20px;
+}
+#menu-nav {
+	margin-top: 6px;
+}
+.navbar-menu {
+	background-color: #666666;
+	font-size: medium;
+	font-weight: bolder;
+}
+#menu-nav .navbar.navbar-menu .container-fluid #bs-example-navbar-collapse-1 .nav.navbar-nav.navbar-right li a {
+	color: #990000;
+}
+#menu-nav .navbar.navbar-menu .container-fluid #bs-example-navbar-collapse-1 .nav.navbar-nav.navbar-right li a:hover {
+	background-color: #990000;
+	color: #400;
+}
+h4 {
+	color: #FFF;
+	background-image: -webkit-gradient(linear, 100.00% 50.87%, 0.00% 49.13%, color-stop( 0% , rgba(255,66,96,1.00)),color-stop( 36.90% , rgba(146,20,34,1.00)),color-stop( 100% , rgba(51,33,35,1.00)));
+	background-image: -webkit-linear-gradient(179deg,rgba(255,66,96,1.00) 0%,rgba(146,20,34,1.00) 36.90%,rgba(51,33,35,1.00) 100%);
+	background-image: -moz-linear-gradient(#ff4260, #921422, #49030a);
+	background-image: -o-linear-gradient(#ff4260, #921422, #49030a);
+	background-image: linear-gradient(271deg,rgba(255,66,96,1.00) 0%,rgba(146,20,34,1.00) 36.90%,rgba(51,33,35,1.00) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4260', endColorstr='#49030a',GradientType=0);
+	text-transform: uppercase;
+	padding: 10px 20px 12px 10px;
+	margin: 0 0 20px 0;
+	position: relative;
+}
+.nav.nav-stacked li a{
+	border-bottom-width: 2px;
+	border-bottom-color: #333333;
+	color: #333333;
+}
+.nav.nav-tabs li {
+	font-size: medium;
+	font-weight: bolder;
+	color: #333333;
+}
+.nav.nav-tabs li a {
+	color: #400;
+}
+.nav.nav-stacked li {
+	border-color: #333333;
+}
+#popular >li {
+	border-bottom: 1px solid;
+	border-bottom-color: #CCC;
+}
+.thumbnail {
+	text-align: center;
+}
