@@ -18,7 +18,7 @@ class TiresControllerTest < ActionController::TestCase
 
   test "should create tire" do
     assert_difference('Tire.count') do
-      post :create, tire: { brand: @tire.brand, pattern: @tire.pattern, price: @tire.price, size: @tire.size, summary: @tire.summary, tire_type: @tire.tire_type, week: @tire.week, year: @tire.year }
+      post :create, tire: { brand_id: @tire.brand_id, pattern_id: @tire.pattern_id, price: @tire.price, size: @tire.size, summary: @tire.summary, tire_type: @tire.tire_type, week: @tire.week, year: @tire.year }
     end
 
     assert_redirected_to tire_path(assigns(:tire))
@@ -35,7 +35,7 @@ class TiresControllerTest < ActionController::TestCase
   end
 
   test "should update tire" do
-    patch :update, id: @tire, tire: { brand: @tire.brand, pattern: @tire.pattern, price: @tire.price, size: @tire.size, summary: @tire.summary, tire_type: @tire.tire_type, week: @tire.week, year: @tire.year }
+    patch :update, id: @tire, tire: { brand_id: @tire.brand_id, pattern_id: @tire.pattern_id, price: @tire.price, size: @tire.size, summary: @tire.summary, tire_type: @tire.tire_type, week: @tire.week, year: @tire.year }
     assert_redirected_to tire_path(assigns(:tire))
   end
 

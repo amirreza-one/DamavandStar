@@ -1,20 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  brand: MyString
+  brand_id: 
   size: MyString
   tire_type: MyString
-  pattern: MyString
+  pattern_id: 
   year: 1
   week: 1
   summary: MyText
   price: 1
 
 two:
-  brand: MyString
+  brand_id: 
   size: MyString
   tire_type: MyString
-  pattern: MyString
+  pattern_id: 
   year: 1
   week: 1
   summary: MyText

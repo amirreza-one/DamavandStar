@@ -3930,3 +3930,1284 @@ Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-30 23:12:17 +0430
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 23:12:17 +0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTires (20140531130156)
+  [1m[35m (1.2ms)[0m  CREATE TABLE `tires` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `brand_id` int(11) NOT NULL, `size` varchar(255) NOT NULL, `tire_type` varchar(255), `pattern_id` int(11) NOT NULL, `year` int(11), `week` int(11), `summary` text, `price` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'tires' already exists: CREATE TABLE `tires` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `brand_id` int(11) NOT NULL, `size` varchar(255) NOT NULL, `tire_type` varchar(255), `pattern_id` int(11) NOT NULL, `year` int(11), `week` int(11), `summary` text, `price` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTires (20140531130156)
+  [1m[35m (25.4ms)[0m  CREATE TABLE `tires` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `brand_id` int(11) NOT NULL, `size` varchar(255) NOT NULL, `tire_type` varchar(255), `pattern_id` int(11) NOT NULL, `year` int(11), `week` int(11), `summary` text, `price` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (23.1ms)[0m  [1mCREATE INDEX `index_tires_on_brand_id` ON `tires` (`brand_id`) [0m
+  [1m[35m (16.6ms)[0m  CREATE INDEX `index_tires_on_pattern_id` ON `tires` (`pattern_id`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140531130156')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBrands (20140531130607)
+  [1m[35m (24.5ms)[0m  CREATE TABLE `brands` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `country` varchar(255), `summary` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140531130607')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePatterns (20140531130718)
+  [1m[35m (19.7ms)[0m  CREATE TABLE `patterns` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `brand_id` int(11), `summary` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (18.8ms)[0m  [1mCREATE INDEX `index_patterns_on_brand_id` ON `patterns` (`brand_id`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140531130718')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:42:23 +0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by BrandsController#index as HTML
+  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands`
+  Rendered brands/index.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 96ms (Views: 79.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/test.png" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/southwest-desert-road.jpg" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/sudan.woff" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/assets/BYekan.woff" for 127.0.0.1 at 2014-05-31 17:42:24 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:43:47 +0430
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands`[0m
+  Rendered brands/index.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:43:47 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:43:47 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:43:47 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:43:48 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+Processing by BrandsController#index as HTML
+  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands`
+  Rendered brands/index.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:00 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.4ms)[0m  [1mSELECT `brands`.* FROM `brands`[0m
+  Rendered brands/index.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:44:40 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+Processing by BrandsController#index as HTML
+  [1m[35mBrand Load (0.3ms)[0m  SELECT `brands`.* FROM `brands`
+  Rendered brands/index.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:45:00 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:45:06 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (29.5ms)
+  Rendered brands/new.html.erb within layouts/admin (57.8ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:45:09 +0430
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands`[0m
+  Rendered brands/index.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+Processing by BrandsController#index as HTML
+  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands`
+  Rendered brands/index.html.erb within layouts/admin (1.8ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:15 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands`[0m
+  Rendered brands/index.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:46:29 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+Processing by BrandsController#index as HTML
+  [1m[35mBrand Load (0.4ms)[0m  SELECT `brands`.* FROM `brands`
+  Rendered brands/index.html.erb within layouts/admin (2.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:47:23 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands`[0m
+  Rendered brands/index.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:48:30 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:48:31 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (5.6ms)
+  Rendered brands/new.html.erb within layouts/admin (7.5ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (4.0ms)
+  Rendered brands/new.html.erb within layouts/admin (5.8ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:34 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (23.8ms)
+  Rendered brands/new.html.erb within layouts/admin (28.6ms)
+Completed 200 OK in 92ms (Views: 72.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:51:47 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (2.8ms)
+  Rendered brands/new.html.erb within layouts/admin (4.2ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:01 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.2ms)
+  Rendered brands/new.html.erb within layouts/admin (4.2ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:46 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:53:47 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (4.7ms)
+  Rendered brands/new.html.erb within layouts/admin (6.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:54:09 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:55:49 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (43.2ms)
+  Rendered brands/new.html.erb within layouts/admin (44.6ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:55:50 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.4ms)
+  Rendered brands/new.html.erb within layouts/admin (4.5ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:26 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.5ms)
+  Rendered brands/new.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:56:37 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.4ms)
+  Rendered brands/new.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:57:29 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.4ms)
+  Rendered brands/new.html.erb within layouts/admin (4.6ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/sudan.woff" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/assets/BYekan.woff" for 127.0.0.1 at 2014-05-31 17:58:27 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.2ms)
+  Rendered brands/new.html.erb within layouts/admin (4.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:29 +0430
+
+
+Started GET "/tires" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+Processing by TiresController#index as HTML
+  [1m[35mTire Load (0.3ms)[0m  SELECT `tires`.* FROM `tires`
+  Rendered tires/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/headimage1.png" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/headimage2.jpg" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/headimage3.jpg" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/test.png" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/view.png" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/assets/twitter/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-31 17:58:35 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.1ms)
+  Rendered brands/new.html.erb within layouts/admin (4.0ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/sudan.woff" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/assets/BYekan.woff" for 127.0.0.1 at 2014-05-31 18:00:49 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (3.6ms)
+  Rendered brands/new.html.erb within layouts/admin (4.8ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:23 +0430
+
+
+Started GET "/assets/sudan.woff" for 127.0.0.1 at 2014-05-31 18:01:24 +0430
+
+
+Started GET "/assets/BYekan.woff" for 127.0.0.1 at 2014-05-31 18:01:24 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (2.3ms)
+  Rendered brands/new.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/sudan.woff" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/assets/BYekan.woff" for 127.0.0.1 at 2014-05-31 18:01:50 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (2.7ms)
+  Rendered brands/new.html.erb within layouts/admin (4.6ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:03 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (2.6ms)
+  Rendered brands/new.html.erb within layouts/admin (3.5ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/sudan.woff" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/assets/BYekan.woff" for 127.0.0.1 at 2014-05-31 18:02:20 +0430
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+Processing by BrandsController#new as HTML
+  Rendered brands/_form.html.erb (2.9ms)
+  Rendered brands/new.html.erb within layouts/admin (4.2ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-05-31 18:04:38 +0430
+
+
+Started GET "/brands" for 127.0.0.1 at 2014-05-31 18:04:42 +0430
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands`[0m
+  Rendered brands/index.html.erb within layouts/admin (2.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)

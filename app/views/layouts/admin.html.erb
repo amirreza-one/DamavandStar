@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Damavand Star</title>
+  <%= stylesheet_link_tag 'application.css','template' , 'bootstrap-rtl.min' , 'rtl' ,'menu' %>
+  <%= javascript_include_tag 'application.js', 'bootstrap.min' , 'respond' %>
+  <style type="text/css">
+      .btn.btn-default        {
+          background-color: #990000;
+          color: #400;
+          border-color:#400 ;
+      }
+      .btn.btn-primary        {
+          background-color: #666;
+          color: white;
+          border-color:#333 ;
+      }
+      #search-input{
+          background-color: #AAA;
+          color: #000;
+          border-color:#444 ;
+      }
+      .dropdown:hover .dropdown-menu {
+          display: block;}
+  </style>
+</head>
+<body>
+<div class="col-sm-offset-1 col-sm-10">
+  <div class="row">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">دماوند استار</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Link</a></li>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" id="search-input" placeholder="جستجو">
+              </div>
+              <button type="submit" class="btn btn-default" >جستجو</button>
+            </form>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </div>
+  <div class="row" >
+  </div>
+  <div class="row" id="menu-nav">
+    <nav class="navbar navbar-menu" role="navigation" >
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">سواری<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Nexen</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Apollo</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Ornet</a></li>
+              </ul>
+            </li>
+            <li><a href="#">کامیونی</a></li>
+            <li><a href="#">اسپورت</a></li>
+            <li><a href="#">زمستانی</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </div>
+  <div class="row" id="mainDiv" style="padding-right: 1%;padding-left: 1%;">
+      <%= yield %>
+  </div>
+</div>
+</div>
+</body>
+</html>

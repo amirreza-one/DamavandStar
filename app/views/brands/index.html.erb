@@ -1,0 +1,31 @@
+<h1>کارخانه ها</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>نام</th>
+      <th>کشور</th>
+      <th>توضیحات</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brands.each do |brand| %>
+      <tr>
+        <td><%= brand.name %></td>
+        <td><%= brand.country %></td>
+        <td><%= brand.summary %></td>
+        <td><%= link_to 'Show', brand %></td>
+        <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
+        <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'افزودن', new_brand_path %>
