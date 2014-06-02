@@ -5211,3 +5211,137 @@ Processing by BrandsController#index as HTML
   [1m[36mBrand Load (0.3ms)[0m  [1mSELECT `brands`.* FROM `brands`[0m
   Rendered brands/index.html.erb within layouts/admin (2.0ms)
 Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 16:12:58 +0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/MacbookPro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 16:13:00 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/MacbookPro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tires" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+Processing by TiresController#index as HTML
+  [1m[35mTire Load (0.4ms)[0m  SELECT `tires`.* FROM `tires`
+  Rendered tires/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 87ms (Views: 81.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/bootstrap-rtl.min.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/rtl.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/respond.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/southwest-desert-road.jpg" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/damavandstarlogo.png" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/headimage1.png" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/headimage2.jpg" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/test.png" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/headimage3.jpg" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/view.png" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/BYekan.woff" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/sudan.woff" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/assets/twitter/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-06-02 16:13:01 +0430
+
+
+Started GET "/tires" for 127.0.0.1 at 2014-06-02 16:13:35 +0430
+Processing by TiresController#index as HTML
+  [1m[36mTire Load (1.4ms)[0m  [1mSELECT `tires`.* FROM `tires`[0m
+  Rendered tires/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:35 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:35 +0430
+
+
+Started GET "/assets/damavandstarlogo.png" for 127.0.0.1 at 2014-06-02 16:13:35 +0430
+
+
+Started GET "/tires" for 127.0.0.1 at 2014-06-02 16:13:54 +0430
+Processing by TiresController#index as HTML
+  [1m[35mTire Load (0.3ms)[0m  SELECT `tires`.* FROM `tires`
+  Rendered tires/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-02 16:13:54 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-02 16:13:54 +0430
+
+
+Started GET "/assets/damavandstarlogo.png" for 127.0.0.1 at 2014-06-02 16:13:54 +0430
+
+
+Started GET "/tires" for 127.0.0.1 at 2014-06-02 16:14:55 +0430
+Processing by TiresController#index as HTML
+  [1m[36mTire Load (0.4ms)[0m  [1mSELECT `tires`.* FROM `tires`[0m
+  Rendered tires/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-02 16:14:55 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-02 16:14:55 +0430
+
+
+Started GET "/assets/damavandstarlogo.png" for 127.0.0.1 at 2014-06-02 16:14:55 +0430
